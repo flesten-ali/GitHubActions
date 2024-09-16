@@ -34,7 +34,7 @@ public class WeatherShould
 
         _weather.Object.UpdateWeatherState(_weatherData);
 
-        rainBot.Verify(x => x.Update(_weatherData), Times.Once);
+        rainBot.Verify(x => x.Update(_weatherData), Times.Never);
         sunBot.Verify(x => x.Update(_weatherData), Times.Once);
         snowBot.Verify(x => x.Update(_weatherData), Times.Once);
     }
